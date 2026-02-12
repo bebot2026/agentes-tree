@@ -1,0 +1,112 @@
+<!-- 
+    TEMPLATE: Novo Agente
+    
+    Como usar:
+    1. Copie este bloco completo
+    2. Cole na seção apropriada de index.html:
+       - .level-1 (Topo - Comunicação)
+       - .level-2 (Meio - Coordenação)  
+       - .level-3 (Base - Especialistas)
+    3. Substitua os campos marcados com [...]
+    4. Escolha um ícone emoji ou FontAwesome
+    5. Selecione o modelo (sonnet ou haiku)
+-->
+
+<!-- ============================================ -->
+<!-- INÍCIO DO TEMPLATE - COPIE DAQUI -->
+<!-- ============================================ -->
+
+<div class="agent-card specialist [NOME-DA-CLASSE]" data-agent="[id-unico]">
+    <!-- 
+        ÍCONE: Escolha um emoji ou use FontAwesome
+        Exemplos de emojis:
+        🤖 🚀 💡 🔧 📊 🛡️ 🎯 🔍 📝 ⚡ 🌐 🎨 
+    -->
+    <div class="agent-icon">[EMOJI ou ÍCONE]</div>
+    
+    <!-- NOME: Nome completo do agente -->
+    <h2>[Nome do Agente]</h2>
+    
+    <!-- 
+        MODELO: Escolha uma das opções abaixo
+        Apague a linha que NÃO for usar
+    -->
+    <div class="agent-badge sonnet">Claude Sonnet</div>
+    <div class="agent-badge haiku">Claude Haiku</div>
+    
+    <!-- FUNÇÃO: Título curto da função principal -->
+    <p class="agent-role">[Função Principal]</p>
+    
+    <!-- DESCRIÇÃO: Uma frase descrevendo o que o agente faz -->
+    <p class="agent-description">[Breve descrição das responsabilidades e objetivos]</p>
+</div>
+
+<!-- ============================================ -->
+<!-- FIM DO TEMPLATE -->
+<!-- ============================================ -->
+
+<!-- 
+    APÓS ADICIONAR:
+    
+    1. Adicione delay de animação em style.css:
+       
+       .[NOME-DA-CLASSE] { animation-delay: 0.9s; }
+    
+    2. As conexões SVG são geradas automaticamente!
+    
+    3. Teste localmente antes de fazer push:
+       python -m http.server 8000
+    
+    4. Faça commit e push:
+       git add .
+       git commit -m "✨ Adicionar agente [Nome]"
+       git push origin main
+-->
+
+<!-- ============================================ -->
+<!-- EXEMPLOS PRONTOS -->
+<!-- ============================================ -->
+
+<!-- Exemplo 1: Agente de Análise de Dados -->
+<!--
+<div class="agent-card specialist analista" data-agent="analyst">
+    <div class="agent-icon">📊</div>
+    <h2>Analista</h2>
+    <div class="agent-badge sonnet">Claude Sonnet</div>
+    <p class="agent-role">Análise de Dados</p>
+    <p class="agent-description">Processa e interpreta grandes volumes de dados</p>
+</div>
+-->
+
+<!-- Exemplo 2: Agente de Segurança -->
+<!--
+<div class="agent-card specialist seguranca" data-agent="security">
+    <div class="agent-icon">🛡️</div>
+    <h2>Segurança</h2>
+    <div class="agent-badge haiku">Claude Haiku</div>
+    <p class="agent-role">Cibersegurança</p>
+    <p class="agent-description">Monitora e protege sistemas contra ameaças</p>
+</div>
+-->
+
+<!-- Exemplo 3: Agente de Automação -->
+<!--
+<div class="agent-card specialist automacao" data-agent="automation">
+    <div class="agent-icon">⚡</div>
+    <h2>Automação</h2>
+    <div class="agent-badge sonnet">Claude Sonnet</div>
+    <p class="agent-role">Workflow</p>
+    <p class="agent-description">Automatiza processos e tarefas repetitivas</p>
+</div>
+-->
+
+<!-- Exemplo 4: Agente de Qualidade -->
+<!--
+<div class="agent-card specialist qa" data-agent="quality">
+    <div class="agent-icon">✅</div>
+    <h2>Quality Assurance</h2>
+    <div class="agent-badge haiku">Claude Haiku</div>
+    <p class="agent-role">Testes & QA</p>
+    <p class="agent-description">Garante qualidade e consistência das entregas</p>
+</div>
+-->
