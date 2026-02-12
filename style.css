@@ -1,0 +1,320 @@
+/* Reset e Variáveis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: #1E73BE;
+    --dark-blue: #0D3B66;
+    --light-blue: #4A9EE0;
+    --accent-blue: #E8F4FD;
+    --sonnet-color: #9B59B6;
+    --haiku-color: #3498DB;
+    --bg-color: #F5F7FA;
+    --card-bg: #FFFFFF;
+    --text-dark: #2C3E50;
+    --text-light: #7F8C8D;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--accent-blue) 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* Container da Árvore */
+.tree-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    padding: 40px 20px;
+}
+
+/* Níveis */
+.level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.level-1 {
+    margin-bottom: 100px;
+}
+
+.level-2 {
+    margin-bottom: 100px;
+}
+
+/* Cards dos Agentes */
+.agent-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    min-width: 280px;
+    max-width: 320px;
+    border: 3px solid transparent;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.agent-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-blue);
+}
+
+/* Animações em cascata */
+.bebot { animation-delay: 0.1s; }
+.coordinator { animation-delay: 0.3s; }
+.programmer { animation-delay: 0.5s; }
+.researcher { animation-delay: 0.6s; }
+.designer { animation-delay: 0.7s; }
+.writer { animation-delay: 0.8s; }
+
+/* Ícone do Agente */
+.agent-icon {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.agent-card h2 {
+    font-size: 1.6rem;
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* Badges dos Modelos */
+.agent-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 auto 15px;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agent-badge.sonnet {
+    background: linear-gradient(135deg, #9B59B6, #8E44AD);
+    color: white;
+}
+
+.agent-badge.haiku {
+    background: linear-gradient(135deg, #3498DB, #2980B9);
+    color: white;
+}
+
+/* Função e Descrição */
+.agent-role {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.agent-description {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* SVG Connections */
+.connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.connection-line {
+    stroke: var(--primary-blue);
+    stroke-width: 3;
+    fill: none;
+    opacity: 0.4;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 1.5s ease-out forwards;
+}
+
+.connection-arrow {
+    fill: var(--primary-blue);
+    opacity: 0.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.tech-stack {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--primary-blue);
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .level-3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 700px;
+        margin: 0 auto 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        margin-bottom: 40px;
+    }
+
+    .tree-container {
+        padding: 20px 10px;
+    }
+
+    .level {
+        margin-bottom: 60px;
+        gap: 20px;
+    }
+
+    .level-1, .level-2 {
+        margin-bottom: 70px;
+    }
+
+    .agent-card {
+        min-width: auto;
+        max-width: 100%;
+        padding: 25px 20px;
+    }
+
+    .agent-icon {
+        font-size: 3rem;
+    }
+
+    .agent-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .level-3 {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .agent-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Estado Ativo/Interativo */
+.agent-card.active {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(30, 115, 190, 0.2);
+}
+
+/* Tooltip */
+.agent-card::after {
+    content: 'Clique para detalhes';
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-blue);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.agent-card:hover::after {
+    opacity: 1;
+}

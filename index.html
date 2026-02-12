@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Agentes Be-Wide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🤖 Sistema Multi-Agentes Be-Wide</h1>
+        <p class="subtitle">Arquitetura Hierárquica de Agentes IA</p>
+    </header>
+
+    <main class="tree-container">
+        <!-- Nível 1: Bebot (Topo) -->
+        <div class="level level-1">
+            <div class="agent-card bebot" data-agent="bebot">
+                <div class="agent-icon">💬</div>
+                <h2>Bebot</h2>
+                <div class="agent-badge haiku">Claude Haiku</div>
+                <p class="agent-role">Comunicação</p>
+                <p class="agent-description">Interface principal de comunicação com o utilizador</p>
+            </div>
+        </div>
+
+        <!-- SVG para conexões -->
+        <svg class="connections" id="connections">
+            <!-- Linhas serão geradas dinamicamente -->
+        </svg>
+
+        <!-- Nível 2: Coordenador (Meio) -->
+        <div class="level level-2">
+            <div class="agent-card coordinator" data-agent="coordinator">
+                <div class="agent-icon">🎯</div>
+                <h2>Coordenador</h2>
+                <div class="agent-badge sonnet">Claude Sonnet</div>
+                <p class="agent-role">Orquestração</p>
+                <p class="agent-description">Coordena e distribui tarefas entre os agentes especializados</p>
+            </div>
+        </div>
+
+        <!-- Nível 3: Agentes Especializados (Base) -->
+        <div class="level level-3">
+            <div class="agent-card specialist programmer" data-agent="programmer">
+                <div class="agent-icon">👨‍💻</div>
+                <h2>Programador</h2>
+                <div class="agent-badge sonnet">Claude Sonnet</div>
+                <p class="agent-role">Desenvolvimento</p>
+                <p class="agent-description">Criação e manutenção de código</p>
+            </div>
+
+            <div class="agent-card specialist researcher" data-agent="researcher">
+                <div class="agent-icon">🔍</div>
+                <h2>Pesquisa</h2>
+                <div class="agent-badge haiku">Claude Haiku</div>
+                <p class="agent-role">Investigação</p>
+                <p class="agent-description">Busca e análise de informações</p>
+            </div>
+
+            <div class="agent-card specialist designer" data-agent="designer">
+                <div class="agent-icon">🎨</div>
+                <h2>Designer</h2>
+                <div class="agent-badge sonnet">Claude Sonnet</div>
+                <p class="agent-role">Design & UX</p>
+                <p class="agent-description">Interface e experiência visual</p>
+            </div>
+
+            <div class="agent-card specialist writer" data-agent="writer">
+                <div class="agent-icon">✍️</div>
+                <h2>Escritor</h2>
+                <div class="agent-badge haiku">Claude Haiku</div>
+                <p class="agent-role">Conteúdo</p>
+                <p class="agent-description">Produção de textos e documentação</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Be-Wide | Sistema de Agentes Inteligentes</p>
+        <p class="tech-stack">HTML • CSS • JavaScript • GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
