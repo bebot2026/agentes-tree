@@ -3,82 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Árvore de Agentes Be-Wide</title>
+    <title>Árvore de Agentes Be-Wide - Nova Organização</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>🤖 Sistema Multi-Agentes Be-Wide</h1>
-        <p class="subtitle">Arquitetura Hierárquica de Agentes IA</p>
+        <p class="subtitle">Estrutura On-Demand com Sub-Agentes Temporários</p>
     </header>
 
     <main class="tree-container">
-        <!-- Nível 1: Bebot (Topo) -->
+        <!-- Nível 1: Bebot (Gateway/Coordinator) -->
         <div class="level level-1">
             <div class="agent-card bebot" data-agent="bebot">
                 <div class="agent-icon">💬</div>
                 <h2>Bebot</h2>
-                <div class="agent-badge haiku">Claude Haiku</div>
-                <p class="agent-role">Comunicação</p>
-                <p class="agent-description">Interface principal de comunicação com o utilizador</p>
+                <div class="agent-badge grok">Grok 4.1-fast</div>
+                <p class="agent-role">Gateway & Coordinator</p>
+                <p class="agent-description">Interface principal com equipa. Coordena e spawna sub-agentes temporários para tarefas específicas.</p>
             </div>
         </div>
 
         <!-- SVG para conexões -->
         <svg class="connections" id="connections">
-            <!-- Linhas serão geradas dinamicamente -->
+            <!-- Linhas geradas dinamicamente -->
         </svg>
 
-        <!-- Nível 2: Coordenador (Meio) -->
+        <!-- Nível 2: Sub-Agentes Temporários -->
         <div class="level level-2">
-            <div class="agent-card coordinator" data-agent="coordinator">
-                <div class="agent-icon">🎯</div>
-                <h2>Coordenador</h2>
-                <div class="agent-badge opus">Claude Opus 4.6</div>
-                <p class="agent-role">Orquestração</p>
-                <p class="agent-description">Coordena e distribui tarefas entre os agentes especializados</p>
+            <div class="agent-card assistant clawdy" data-agent="clawdy">
+                <div class="agent-icon">🧑‍💼</div>
+                <h2>Clawdy</h2>
+                <div class="agent-badge minimax">MiniMax M2.5</div>
+                <p class="agent-role">Assistente Geral</p>
+                <p class="agent-description">Tarefas default/generalistas (spawn automático se não há especialista).</p>
             </div>
-        </div>
 
-        <!-- Nível 3: Agentes Especializados (Base) -->
-        <div class="level level-3">
-            <div class="agent-card specialist programmer" data-agent="programmer">
+            <div class="agent-card specialist programmer" data-agent="programador">
                 <div class="agent-icon">👨‍💻</div>
                 <h2>Programador</h2>
-                <div class="agent-badge gpt5">GPT-5.2-Codex</div>
-                <p class="agent-role">Desenvolvimento</p>
-                <p class="agent-description">Código, WordPress, WooCommerce, APIs e automação</p>
+                <div class="agent-badge codex">GPT-5.2-Codex</div>
+                <p class="agent-role">Desenvolvimento Avançado</p>
+                <p class="agent-description">Código, apps, WordPress/Woo, APIs (apenas programação complexa).</p>
             </div>
 
-            <div class="agent-card specialist researcher" data-agent="researcher">
+            <div class="agent-card specialist seo" data-agent="seo">
                 <div class="agent-icon">🔍</div>
-                <h2>Investigador</h2>
+                <h2>Especialista SEO</h2>
                 <div class="agent-badge sonnet">Claude Sonnet 4.5</div>
-                <p class="agent-role">Investigação</p>
-                <p class="agent-description">Pesquisa web, análise competitiva e fact-checking</p>
-            </div>
-
-            <div class="agent-card specialist designer" data-agent="designer">
-                <div class="agent-icon">🎨</div>
-                <h2>Designer</h2>
-                <div class="agent-badge sonnet">Claude Sonnet 4.5</div>
-                <p class="agent-role">Design & UX</p>
-                <p class="agent-description">CSS, layouts, componentes visuais e acessibilidade</p>
-            </div>
-
-            <div class="agent-card specialist writer" data-agent="writer">
-                <div class="agent-icon">✍️</div>
-                <h2>Escritor</h2>
-                <div class="agent-badge sonnet">Claude Sonnet 4.5</div>
-                <p class="agent-role">Conteúdo</p>
-                <p class="agent-description">Copywriting, SEO, documentação e storytelling</p>
+                <p class="agent-role">Auditorias & Otimização</p>
+                <p class="agent-description">Auditorias SEO extensas, estratégias locais/on-page.</p>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>© 2026 Be-Wide | Sistema de Agentes Inteligentes</p>
-        <p class="tech-stack">HTML • CSS • JavaScript • GitHub Pages</p>
+        <p>© 2026 Be-Wide | Sub-Agentes On-Demand | Atualização: 13 Fev 2026</p>
+        <p class="tech-stack">HTML • CSS • JS • GitHub Pages</p>
     </footer>
 
     <script src="script.js"></script>
