@@ -148,6 +148,11 @@ header h1 {
     color: white;
 }
 
+.agent-badge.opus {
+    background: linear-gradient(135deg, #E74C3C, #C0392B);
+    color: white;
+}
+
 /* Função e Descrição */
 .agent-role {
     text-align: center;

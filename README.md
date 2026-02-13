@@ -9,16 +9,16 @@ Visualização interativa da estrutura hierárquica do sistema multi-agentes Be-
 ## 📋 Estrutura dos Agentes
 
 ### Nível 1: Comunicação
-- **Bebot** (Claude Haiku) - Interface principal de comunicação
+- **Bebot** (Claude Haiku 4.5) - Interface principal de comunicação com equipa
 
 ### Nível 2: Orquestração
-- **Coordenador** (Claude Sonnet) - Distribui tarefas entre especialistas
+- **Coordenador** (Claude Opus 4.6) - Estratégia e distribuição de tarefas
 
 ### Nível 3: Especialistas
-- **Programador** (Claude Sonnet) - Desenvolvimento de código
-- **Pesquisa** (Claude Haiku) - Investigação e análise
-- **Designer** (Claude Sonnet) - Design e UX
-- **Escritor** (Claude Haiku) - Produção de conteúdo
+- **Programador** (GPT-5.2 Codex) - Código, WordPress, WooCommerce, APIs
+- **Investigador** (Claude Sonnet 4.5) - Pesquisa web, análise competitiva
+- **Designer** (Claude Sonnet 4.5) - CSS, layouts, design visual
+- **Escritor** (Claude Sonnet 4.5) - Copywriting, SEO, documentação
 
 ## 🚀 Como Usar
 
