@@ -14,7 +14,7 @@ Visualização da nova estrutura hierárquica com **sub-agentes temporários spa
 ### Sub-Agentes Temporários (On-Demand)
 | Agente | Modelo | Função |
 |--------|--------|--------|
-| **Clawdy** | MiniMax M2.5 | Assistente geral (default para tarefas simples) |
+| **Assistente** | MiniMax M2.5 | Assistente geral (default para tarefas simples) |
 | **Programador** | GPT-5.2-Codex | Programação avançada/apps |
 | **Especialista SEO** | Claude Sonnet 4.5 | Auditorias/estratégias SEO |
 | *(Mais a definir)* | - | - |
